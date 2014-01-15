@@ -1,0 +1,14 @@
+<div class="row">
+	<form class="form col-sm-6 col-sm-offset-3" data-ng-submit="login()">
+		<h1>Login</h1>
+		<hr class="colorgraph">
+		<input type="hidden" name="csrf_token" value="{{ token }}">
+		<div class="form-group"><input class="form-control input-lg" type="email" name="email" title="email" placeholder="email" required data-ng-model="email"></div>
+		<div class="form-group"><input class="form-control input-lg" type="password" title="password" placeholder="password" name="password" required data-ng-model="password"></div>
+		<hr class="colorgraph">
+		<div class="row">
+			<div class="col-sm-6"><input class="btn btn-success btn-lg btn-block" type="submit" value="Log me in"></div>
+			<div class="col-sm-6"><a class="btn btn-primary btn-lg btn-block" title="Register" href="#/register" >Register</a></div>
+		</div>
+	</form>
+</div>

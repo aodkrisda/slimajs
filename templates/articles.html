@@ -1,0 +1,7 @@
+<h1>{{ title }}</h1>
+<section class="list-group">
+	<article class="list-group-item" data-ng-repeat="a in articles">
+		<h2>{{ a.title }}</h2>
+		<p>{{ a.content }} <a href="#/{{ a.slug }}" class="btn btn-primary">more</a></p>
+	</article>	
+</section>
