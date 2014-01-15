@@ -7,7 +7,7 @@ demo: (soon)
 
 
 ##CONFIG:
-This MySql version, just run this sql and you ready to go:
+This is MySql version, just run this sql and you ready to go:
 ```sql
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -23,7 +23,7 @@ INSERT INTO `users` (`id`, `email`, `password`, `role`) VALUES
 
 
 ##About safety
-* RedBean ORM so dont worry about sql injection
+* RedBean ORM on board so dont worry about sql injection
 * CsrfGuard Module included - any POST / PUT / DELETE request must have a valid token
 
 
