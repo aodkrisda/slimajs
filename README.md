@@ -1,5 +1,5 @@
 slimajs
-=======
+======
 Basic SlimPHP &amp; AngularJS RESTfull cms
 Login as:
 admin@admin.pl / admin
@@ -8,7 +8,7 @@ demo: (soon)
 
 
 CONFIG:
-=======
+===
 This MySql version, just run this sql and you ready to go:
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -24,13 +24,13 @@ INSERT INTO `users` (`id`, `email`, `password`, `role`) VALUES
 
 
 About safety
-============
+===
 * RedBean ORM so dont worry about sql injection
 * CsrfGuard Module included - any POST / PUT / DELETE request must have a valid token
 
 
 Todo
-====
+===
 A lot :)
 
 
