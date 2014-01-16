@@ -13,14 +13,16 @@ app.config(function($routeProvider) {
 app
 	.service('AuthService', function($http, $location, $rootScope) {
 		return {
-			me: function(scope) {
+			me: function() {
 				$http
 					.get('/me')
 					.success(function(r) {
 						if(r.id) {
-							scope.me = r;
+							$rootScope.me = r;
+							return r;
 						}else{
-							return null;
+							delete $rootScope.me;
+							return false;
 						}
 					})
 				;
@@ -34,14 +36,20 @@ app
 				;
 			},
 			mustBeGuest: function() {
-				if($rootScope.me) {
-					$location.path('/');
-				}
+				$http
+					.get('/me')
+					.success(function(r) {
+						if(r.id) $location.path('/');
+					})
+				;
 			},
 			mustBeMember: function() {
-				if(!$rootScope.me) {
-					$location.path('/login');
-				}
+				$http
+					.get('/me')
+					.success(function(r) {
+						if(!r.id) $location.path('/login');
+					})
+				;
 			}
 		};
 	})
@@ -65,7 +73,7 @@ app
 	})
 ;
 
-
+//CONTROLLERS--------------------------------------------------------------------------------------
 //AUTH
 function loginCtrl($scope, $http, $location, AuthService, FlashService) {
 	AuthService.mustBeGuest();
