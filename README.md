@@ -3,7 +3,6 @@ Basic SlimPHP &amp; AngularJS RESTfull cms
 Login as:
 admin@admin.pl / admin
 
-demo: https://slimajs-c9-eip3.c9.io
 
 
 ##CONFIG:
