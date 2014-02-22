@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="/css/addons.css">
 	<script src="/assets/js/angular.min.js"></script>
 	<script src="/assets/js/angular-route.js"></script>
+	<script src="/assets/js/angular-cookies.js"></script>
 	<script src="/js/app.js"></script>
 	<title>SlimAjBlog</title>
 </head>
@@ -23,9 +24,10 @@
 					<li><a href="/">Home</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li data-ng-hide="me !== undefined"><a href="#/login">Login</a></li>
-					<li data-ng-hide="me !== undefined"><a href="#/register">Register</a></li>
-					<li data-ng-hide="me === undefined"><a href="/logout">Logout</a></li>
+					<li data-ng-hide="me !== undefined"><a title="Login" href="#/login">Login</a></li>
+					<li data-ng-hide="me !== undefined"><a title="Register" href="#/register">Register</a></li>
+					<li data-ng-hide="me === undefined"><a title="Logout" href="#/logout">Logout</a></li>
+					<li data-ng-hide="me === undefined || me.role !== 'user'"><a title="Profile" href="#/profile">Profile</a></li>
 				</ul>
 			</nav>
 		</div>

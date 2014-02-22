@@ -3,8 +3,18 @@
 		<h1>Register</h1>
 		<hr class="colorgraph">
 		<input type="hidden" name="csrf_token" value="{{ token }}">
-		<div class="form-group"><input class="form-control input-lg" type="email" name="email" title="email" placeholder="email" required data-ng-model="email"></div>
-		<div class="form-group"><input class="form-control input-lg" type="password" title="password" placeholder="password" name="password" required data-ng-model="password"></div>
+		<div class="form-group">
+			<input class="form-control input-lg" type="email" name="email" title="email" placeholder="email" required data-ng-model="email">
+		</div>
+		<div class="form-group">
+			<input class="form-control input-lg" type="password" title="password" placeholder="password" name="password" required data-ng-model="password">
+		</div>
+		<div class="form-group">
+			<input class="form-control input-lg" type="name" title="name" placeholder="name" name="name" required data-ng-model="name">
+		</div>
+		<div class="form-group">
+			<input class="form-control input-lg" type="surname" title="surname" placeholder="surname" name="surname" required data-ng-model="surname">
+		</div>
 		<hr class="colorgraph">
 		<input class="btn btn-success btn-lg btn-block" type="submit" value="Register">
 	</form>
